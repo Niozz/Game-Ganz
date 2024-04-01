@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="rgb(163, 162, 160)" />
-    <link rel="icon" type="image/x-icon" href="/library/assets/img/logo/console/console-v2.png">
-    <link rel="stylesheet" href="/library/assets/css/form-page-css/docs.css">
+    <link rel="icon" type="image/x-icon" href="library/assets/img/logo/console/console-v2.png">
+    <link rel="stylesheet" href="library/assets/css/form-page-css/docs.css">
     <title>Home</title>
 </head>
 
@@ -14,11 +14,11 @@
     <header>
         <div class="navbar-cont">
             <div class="navbar-tix">
-                <img src="/library/assets/img/logo/console/console-v2.png" alt="" width="64px" height="64px">
+                <img src="library/assets/img/logo/console/console-v2.png" alt="" width="64px" height="64px">
                 <label>Game Ganz</label>
                 <div class="navbar-btn-cont">
                     <div>
-                        <a href="/library/page/home/index.html" class="navbar-btn-start">Home</a>
+                        <a href="library/page/home/index.html" class="navbar-btn-start">Home</a>
                         <a href="#" class="navbar-btn">News</a>
                         <a href="" class="navbar-btn">About</a>
                         <a href="" class="navbar-btn-end">Contact</a>
@@ -26,7 +26,7 @@
                     <div class="input-pos">
                         <div class="input">
                             <input onkeydown="onInput()" id="search" type="text" placeholder="Search">
-                            <img onclick="onInput()" src="/library/assets/img/gui/search.png" alt="">
+                            <img onclick="onInput()" src="library/assets/img/gui/search.png" alt="">
                         </div>
                     </div>
                     <div class="list-s">
@@ -78,12 +78,12 @@
         <footer>
             <div id="footer-off">
                 <button class="hidden-bar-off" onclick="footerOff()">
-                    <img src="/library/assets/img/gui/arrow/top-arrow.png" alt="" width="23px;">
+                    <img src="library/assets/img/gui/arrow/top-arrow.png" alt="" width="23px;">
                 </button>
             </div>
             <div id="footer-on">
                 <button class="hidden-bar-on" onclick="footerOn()">
-                    <img src="/library/assets/img/gui/arrow/bottom.arrow.png" alt="" width="23px;">
+                    <img src="library/assets/img/gui/arrow/bottom.arrow.png" alt="" width="23px;">
                 </button>
                 <div class="footer-cont">
                     <a href="#">Copyright © 2021-2024</a>
@@ -92,7 +92,7 @@
             </div>
         </footer>
 
-        <script type="text/javascript" href="/library/assets/js/db.js">
+        <script type="text/javascript" href="library/assets/js/db.js">
             // Variable
             let search = document.getElementById('search')
             let tes = document.getElementById('tes')
@@ -112,13 +112,13 @@
                 offBr.style.display = "none"
             }
             function strPage() {
-                window.location = "/library/page/12-game-gba-terbaik-sepanjang-masa"
+                window.location = "library/page/12-game-gba-terbaik-sepanjang-masa"
             }
             function mdlPage() {
-                window.location = "/library/page/10-game-rpg-gba-terbaik-sepanjang-masa"
+                window.location = "library/page/10-game-rpg-gba-terbaik-sepanjang-masa"
             }
             function edgPage() {
-                window.location = "/library/page/16-game-multiplayer-gba-terbaik-sepanjang-masa"
+                window.location = "library/page/16-game-multiplayer-gba-terbaik-sepanjang-masa"
             }
             function onInput() {
                 if (search.value == "gba") {
