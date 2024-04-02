@@ -14,6 +14,7 @@
 
     --shd-v1 : 0px 2px 5px var(--c-invis);
     --shd-v2 : 0px 2px 2px var(--c-invis);
+    --shd-v3 : 0px 5px 5px var(--c-invis);
     --shd-inset : 1px 2px 5px var(--c-invis) inset;
 
     --co-shd : 2px 2px 5px var(--c-invis);
@@ -220,10 +221,12 @@ header {
 }
 
 .content-sys {
+    transition: 1000ms;
     height:100%;
     background:white;
     box-shadow: var(--shd-v1);
     margin: 0px 2vh;
+    padding:20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -240,6 +243,78 @@ header {
     border-top-right-radius: 19px;
     display: flex;
     justify-content: center;
+}
+
+/* ================= Card Anim ================= */
+
+@keyframes cardAnim {
+    0% {opacity:0%}
+}
+
+@keyframes cardParaf {
+    0% {opacity: 0%; margin-top:50px; filter:blur(2px)}
+    100% {opacity: 100%;}
+}
+
+@keyframes bgAnim {
+    0% {opacity: 0%; transition: 1000ms; background: url(/library/assets/img/bg/astronomy.png);}
+    50% {transition: 1000ms; background:0px -100px url(/library/assets/img/bg/astronomy.png);}
+    100% {transition: 1000ms; background:0px -200px url(/library/assets/img/bg/astronomy.png);}
+}
+/* ================= Card Anim ================= */
+
+.content-sys-card {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height:100%;
+    transition: 1000ms;
+    background:0px -200px url(/library/assets/img/bg/astronomy.png);
+    box-shadow: var(--shd-v3);
+    animation-name: bgAnim;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    margin: 0px 2vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    border-radius: 20px;
+    cursor:default;
+}
+
+.content-sys-card:active {
+    transition: 1000ms;
+    background: url(/library/assets/img/bg/astronomy.png);
+    border-radius: 20px;
+
+}
+
+.content-bg-card {
+    width:100%;
+    background:var(--bg-silver);
+    box-shadow: var(--shd-v3);
+    animation-name: cardAnim;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+    /* animation-iteration-count: infinite; */
+    padding:0px 2vh;
+    border-radius: 19px;
+    display: flex;
+    justify-content: center;
+    position:relative;
+    top:10;
+}
+
+.content-tix-card {
+    animation-name: cardParaf;
+    animation-duration: 600ms;
+    animation-timing-function: linear;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--c-invis);
+    border-bottom-left-radius: 19px;
+    display: flex;
+    align-items: center;
 }
 
 .content-cont {
